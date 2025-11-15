@@ -56,7 +56,7 @@ Plug 'Shougo/vimfiler.vim'
 call s:source_rc('vimfiler.rc.vim')
 
 Plug 'Shougo/junkfile.vim'
-let g:junkfile#directory = $HOME . '/junk/'
+let g:junkfile#directory = $HOME . '/memo/junk'
 nnoremap <silent> [Plug]j :<C-u>Unite junkfile/new junkfile<CR>
 
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -145,6 +145,9 @@ let g:lightline = {
 function! FilenameForLightline()
     return expand('%')
   endfunction
+
+" 
+Plug 'lambdalisue/suda.vim'
 
 call plug#end()
 

@@ -123,3 +123,7 @@ function history-merge --on-event fish_preexec
 end
 
 
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/tadaseiji/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

@@ -6,6 +6,8 @@ else
   set ignorecase
   nnoremap <silent> <C-n> :<C-u>tabn<CR>
   nnoremap <silent> <C-p> :<C-u>tabp<CR>
+  inoremap <silent> jj <ESC>
+  inoremap <silent> kk <ESC>
   "move ^ and $
   noremap <S-h> ^
   noremap <S-l> $
@@ -16,4 +18,6 @@ else
   xnoremap < <gv
   xnoremap > >gv
   vnoremap v $h
+  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 endif

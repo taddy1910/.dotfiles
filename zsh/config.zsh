@@ -6,13 +6,15 @@ case ${OSTYPE} in
   darwin*)
     export PATH=/usr/local/bin:$PATH
     export PATH=$PATH:$HOME/.dotfiles/bin
+    export PATH=/Users/tadaseiji/.local/bin:$PATH
+
     # Java
-    export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_261)
+    #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_261)
 
     # DB2 Environmental variable
     # [ -d /Applications/dsdriver ] && source /Applications/dsdriver/db2profile
-    export IBM_DB_HOME=$HOME/clidriver
-    export PATH=$IBM_DB_HOME/bin:$PATH
+    # export IBM_DB_HOME=$HOME/clidriver
+    # export PATH=$IBM_DB_HOME/bin:$PATH
     export DYLD_LIBRARY_PATH=/usr/local//Cellar/gcc/10.2.0_4/lib/gcc/10:$DYLD_LIBRARY_PATH
     export DYLD_LIBRARY_PATH=$IBM_DB_HOME/lib:$DYLD_LIBRARY_PATH
 
@@ -21,6 +23,11 @@ case ${OSTYPE} in
 
     # psql
     [ -d "/usr/local/opt/libpq" ] && export PATH="/usr/local/opt/libpq/bin:$PATH"
+    [ -d "/usr/local/opt/libpq" ] && export PATH="/usr/local/opt/libpq/bin:$PATH"
+    [ -x "$(command -v anyenv)" ] && eval "$(anyenv init -)"
+
+    # go
+    export PATH=$PATH:$GOPATH/bin
     ;;
   linux*)
     ;;
@@ -43,7 +50,7 @@ if [ ! -d "$HOME/.zinit" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 fi
 source ~/.zinit/bin/zinit.zsh
-zinit light "b4b4r07/enhancd"
+# zinit light "b4b4r07/enhancd"
 export ENHANCD_FILTER=fzf
 
 ########################################
