@@ -155,7 +155,11 @@ if has('nvim')
     "     endif
     " endfunction
     " tnoremap <silent> <C-\><C-z> :<C-u>call EscToggle()<CR>
+    tnoremap <Esc>[13;2u <CR>
+    tnoremap <Esc>[13;5u <CR>
 else
     tnoremap <silent> <Nul> <C-\><C-n>
+    tnoremap <Esc>[13;2u <CR>
+    tnoremap <Esc>[13;5u <CR>
 endif
 
